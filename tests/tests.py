@@ -1,9 +1,8 @@
 import sys
-sys.path.insert(0, '..\src')
 import unittest
 import pandas as pd
+from src.preprocessing import format_ocean_proximity
 
-from preprocessing import format_ocean_proximity
 class FormattingTestCase(unittest.TestCase):
 
     def setUp(self):
