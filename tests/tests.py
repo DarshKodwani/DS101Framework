@@ -11,7 +11,7 @@ class FormattingTestCase(unittest.TestCase):
     def test_format_ocean_proximity(self):
         ref_output = format_ocean_proximity(pd.DataFrame(self.ref_df))
         print(ref_output['ocean_proximity'])
-        self.assertEqual(ref_output['ocean_proximity'][0], "within_hour_ocean")
+        self.assertEqual(ref_output['ocean_proximity'][0], "within_of_hour_ocean")
        
 if __name__ == '__main__':
     unittest.main()
