@@ -10,6 +10,6 @@ def format_ocean_proximity(raw_df):
     Returns:
         formatted_df: pandas df object with the `ocean_proximity` feature with lower case values and `<1H OCEAN` values changed to `within_hour_ocean`
     """
-    raw_df["ocean_proximity"] = ["within_hour_of_ocean" if val == "<1H OCEAN" else val for val in raw_df["ocean_proximity"]]
+    raw_df["ocean_proximity"] = ["within_hour_ocean" if val == "<1H OCEAN" else val for val in raw_df["ocean_proximity"]]
     raw_df["ocean_proximity"] = raw_df["ocean_proximity"].apply(lambda x: x.lower().replace(" ", "_"))
     return raw_df
